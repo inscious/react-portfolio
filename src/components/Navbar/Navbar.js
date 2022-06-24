@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <div className="w-screen fixed drop-shadow-lg">
-            {/* <motion.div
+            <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -24,13 +24,13 @@ const Navbar = () => {
                     stiffness: 100,
                     duration: 1,
                 }}
-            > */}
+            >
                 <div className="z-10 h-20 flex lg:justify-between items-center mx-auto xl:max-w-[1240px]">
                     <Link to="about" smooth={true} duration={500}>
                         {/* <h1 className="text-3xl text-white hover:text-[#BC96E6] duration-150 mx-5 mr-auto">
                             Saul Cortes
                         </h1> */}
-                        <img src={Logo} className="h-20 cursor-pointer"/>
+                        <img src={Logo} className="ml-4 h-20 cursor-pointer"/>
                     </Link>
                     <ul className="hidden lg:flex text-sm lg:mx-5">
                         {navLinks.map((page) => {
@@ -81,7 +81,7 @@ const Navbar = () => {
                         )}
                     </div>
                 </div>
-            {/* </motion.div> */}
+            </motion.div>
         </div>
     );
 };

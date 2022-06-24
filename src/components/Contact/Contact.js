@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+
     return (
         <div
             name="contact"
@@ -23,8 +27,11 @@ const Contact = () => {
                 >
                     <div className="flex justify-center">
                         <span className="text-white text-3xl font-thin tracking-wide md:text-6xl block">
-                            Get in </span>
-                        <span className="text-[#BC96E6] text-3xl font-thin tracking-wide md:text-6xl"> contact
+                            Get in{" "}
+                        </span>
+                        <span className="text-[#BC96E6] text-3xl font-thin tracking-wide md:text-6xl">
+                            {" "}
+                            contact
                         </span>
                         <span className="text-white text-3xl font-thin tracking-wide md:text-6xl">
                             with me!
@@ -39,23 +46,29 @@ const Contact = () => {
                             placeholder="Your name"
                             type="text"
                             id="name"
-                            name="fname"
+                            name="name"
                         />
                         <input
                             className="block w-[65%] bg-gray-200 text-gray-700 rounded-md py-3 px-3 mb-3 leading-tight focus:outline-none mx-auto"
                             placeholder="Your Email"
-                            type="text"
+                            type="email"
                             id="email"
-                            name="fname"
+                            name="email"
                         />
                         <textarea
                             id="message"
                             name="message"
-                            type="email"
-                            rows="4"
+                            type="text"
+                            rows="5"
                             className="block w-[65%] text-gray-700 bg-gray-200 rounded-md py-3 px-3 mb-3 leading-tight focus:outline-none mx-auto"
                             placeholder="Your Message"
                         ></textarea>
+                        <button
+                            onClick={handleSubmit}
+                            className="block w-[65%] bg-gray-200 rounded-md py-3 px-3 mb-3 leading-tight mx-auto"
+                        >
+                            Send Message
+                        </button>
                     </div>
                 </form>
             </div>

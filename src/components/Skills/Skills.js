@@ -1,9 +1,6 @@
 import React from "react";
 import { skillsData } from "./data";
-
-import jsLogo from "../../assets/jsLogo.png";
-// import gitLogo from "../../assets/gitLogo.png";
-// import mongoLogo from "../../assets/mongoLogo.png";
+import { motion } from "framer-motion";
 
 const Skills = () => {
     return (
@@ -11,21 +8,55 @@ const Skills = () => {
             name="skills"
             className="w-screen h-screen flex items-center justify-center mx-auto xl:max-w-[1240px]"
         >
-            <div className="w-screen flex">
-                <div className="grid md:grid-cols-4 p-5">
-                    {skillsData.map((skill) => {
-                        return (
-                            <div key={skill.title} className="w-24 h-24 bg-white rounded-lg shadow-xl flex flex-col">
-                                <div className="flex flex-col items-center">
-                                    <img src={skill.url} className="" />
+            <div className="w-screen flex flex-col">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    animate={{ x: [-10, 0], y: [-10, 0] }}
+                    transition={{
+                        delay: 0.3,
+                        type: "tween",
+                        stiffness: 100,
+                        duration: 1,
+                    }}
+                    className="mx-auto mb-20"
+                >
+                    <h1 className="text-3xl text-white lg:text-6xl font-thin mx-aut0">
+                        My Skills & Knowledge
+                    </h1>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    animate={{  y: [10, 0] }}
+                    transition={{
+                        delay: 0.3,
+                        type: "tween",
+                        stiffness: 100,
+                        duration: 1,
+                    }}
+                    className="mx-auto"
+                >
+                    <div className="grid grid-cols-2 md:grid-cols-4 px-5 mx-auto gap-5">
+                        {skillsData.map((skill) => {
+                            return (
+                                <div
+                                    key={skill.title}
+                                    className="w-24 h-24 flex flex-col items-center mb-5 hover:scale-110 duration-150"
+                                >
+                                    <div className="flex flex-col items-center bg-white rounded-lg shadow-xl mb-1 p-1">
+                                        <img src={skill.url} className="h-20" />
+                                    </div>
+                                    <p className="text-white text-sm">
+                                        {skill.title}
+                                    </p>
                                 </div>
-                                <p className="text-white text-sm">
-                                    {skill.title}
-                                </p>
-                            </div>
-                        );
-                    })}
-                </div>
+                            );
+                        })}
+                    </div>
+                </motion.div>
             </div>
         </div>
     );

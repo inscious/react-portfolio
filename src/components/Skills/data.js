@@ -5,19 +5,18 @@ export const skillsData = [
         image: "../../assets/jsLogo.png",
     },
     {
-        title: "React",
-        url: "https://cdn.sanity.io/images/er8woj0o/production/e0af31fa74b8093940bc2416e2cf22ea39f9575d-512x512.png",
-        image: "../../assets/reactLogo.png",
-    },
-    {
-        title: "Material UI",
-        url: "https://cdn.sanity.io/images/er8woj0o/production/5b6e5467f6d7136061937b59d6ec3639f775e61b-820x820.png",
-        image: "../../assets/muiLogo.png",
-    },
-    {
         title: "Node.js",
         url: "https://cdn.sanity.io/images/er8woj0o/production/d8c8025b1695a3f14f849b99afc71d917ef40813-480x480.png",
         image: "../../assets/nodeLogo.png",
+    },
+    {
+        title: "Python",
+        url: "http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png",
+    },
+    {
+        title: "React",
+        url: "https://cdn.sanity.io/images/er8woj0o/production/e0af31fa74b8093940bc2416e2cf22ea39f9575d-512x512.png",
+        image: "../../assets/reactLogo.png",
     },
     {
         title: "mongoDB",
@@ -33,5 +32,10 @@ export const skillsData = [
         title: "TailwindCSS",
         url: "https://pbs.twimg.com/profile_images/1468993891584073729/a_op8KnL.jpg",
         image: "../../assets/tailwindLogo.png",
+    },
+    {
+        title: "Material UI",
+        url: "https://cdn.sanity.io/images/er8woj0o/production/5b6e5467f6d7136061937b59d6ec3639f775e61b-820x820.png",
+        image: "../../assets/muiLogo.png",
     },
 ];

@@ -42,7 +42,7 @@ Describe your project
 
 The following tools were used in this project:
 
--   [React](https://pt-br.reactjs.org/)
+-   [React](https://reactjs.org/)
 -   [TailwindCSS](https://tailwindcss.com/)
 -   [Framer Motion](https://www.framer.com/motion/)
 -   [React Scroll](https://www.npmjs.com/package/react-scroll)

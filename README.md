@@ -42,12 +42,10 @@ Describe your project
 
 The following tools were used in this project:
 
-<!-- -   [React](https://reactjs.org/) -->
-
 -   <a href="https://reactjs.org/" target="_blank" >React</a>
--   [TailwindCSS](https://tailwindcss.com/)
--   [Framer Motion](https://www.framer.com/motion/)
--   [React Scroll](https://www.npmjs.com/package/react-scroll)
+-   <a href="https://tailwindcss.com/" target="_blank" >TailwindCSS</a>
+-   <a href="https://www.framer.com/motion/" target="_blank">Framer Motion</a>
+-   <a href="https://www.npmjs.com/package/react-scroll" target="_blank">React Scroll</a>
 
 ## :white_check_mark: Requirements
 

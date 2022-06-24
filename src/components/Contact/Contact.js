@@ -21,24 +21,41 @@ const Contact = () => {
                         duration: 0.5,
                     }}
                 >
-                    <h1 className="text-xl mx-5 text-white lg:text-3xl xl lg:mx-1 tracking-wide font-thin">
-                        <span className="text-6xl">Get in </span>
-                        <span className="text-6xl text-[#BC96E6]">
-                            contact{" "}
+                    <div className="flex justify-center">
+                        <span className="text-white text-3xl font-thin tracking-wide md:text-6xl block">
+                            Get in </span>
+                        <span className="text-[#BC96E6] text-3xl font-thin tracking-wide md:text-6xl"> contact
                         </span>
-                        <span className="text-6xl">with me!</span>
-                    </h1>
+                        <span className="text-white text-3xl font-thin tracking-wide md:text-6xl">
+                            with me!
+                        </span>
+                    </div>
                 </motion.div>
-                <form className="w-full max-w-full bg-whit pt-10">
+                <form className="w-full bg-whit pt-5">
                     {/* <label for="name">Your name</label> */}
                     <div className="">
                         <input
-                            className="block bg-gray-200 text-gray-700 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none mx-auto"
+                            className="block w-[65%] bg-gray-200 text-gray-700 rounded-md py-3 px-3 mb-3 leading-tight focus:outline-none mx-auto"
                             placeholder="Your name"
                             type="text"
-                            id="fname"
+                            id="name"
                             name="fname"
                         />
+                        <input
+                            className="block w-[65%] bg-gray-200 text-gray-700 rounded-md py-3 px-3 mb-3 leading-tight focus:outline-none mx-auto"
+                            placeholder="Your Email"
+                            type="text"
+                            id="email"
+                            name="fname"
+                        />
+                        <textarea
+                            id="message"
+                            name="message"
+                            type="email"
+                            rows="4"
+                            className="block w-[65%] text-gray-700 bg-gray-200 rounded-md py-3 px-3 mb-3 leading-tight focus:outline-none mx-auto"
+                            placeholder="Your Message"
+                        ></textarea>
                     </div>
                 </form>
             </div>

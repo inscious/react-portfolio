@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 import { navLinks } from "./data";
+import Logo from '../../assets/scLogo.png'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -26,9 +27,10 @@ const Navbar = () => {
             > */}
                 <div className="z-10 h-20 flex lg:justify-between items-center mx-auto xl:max-w-[1240px]">
                     <Link to="about" smooth={true} duration={500}>
-                        <h1 className="text-3xl text-white hover:text-[#BC96E6] duration-150 mx-5 mr-auto">
+                        {/* <h1 className="text-3xl text-white hover:text-[#BC96E6] duration-150 mx-5 mr-auto">
                             Saul Cortes
-                        </h1>
+                        </h1> */}
+                        <img src={Logo} className="h-20 cursor-pointer"/>
                     </Link>
                     <ul className="hidden lg:flex text-sm lg:mx-5">
                         {navLinks.map((page) => {

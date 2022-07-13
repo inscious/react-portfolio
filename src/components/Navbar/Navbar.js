@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 import { navLinks } from "./data";
-import Logo from '../../assets/scLogo.png'
+import Logo from "../../assets/scLogo.png";
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
     const handleClose = () => setNav(!nav);
 
     return (
-        <div className="w-screen fixed drop-shadow-lg">
+        <div className="w-screen fixed ">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -25,22 +25,28 @@ const Navbar = () => {
                     duration: 1,
                 }}
             >
-                <div className="z-10 h-20 flex lg:justify-between items-center mx-auto xl:max-w-[1240px]">
-                    <Link to="about" smooth={true} duration={500}>
+                <div className="z-20 h-20 flex lg:justify-between items-center mx-auto xl:max-w-[1240px] bg-gradient-to-b from-[#f3f3f4] to-[rgba(243,243,244,0.1)] ">
+                    <Link to="home" smooth={true} duration={500}>
                         {/* <h1 className="text-3xl text-white hover:text-[#BC96E6] duration-150 mx-5 mr-auto">
                             Saul Cortes
                         </h1> */}
-                        <img src={Logo} className="ml-4 h-20 cursor-pointer"/>
+                        <img
+                            src={Logo}
+                            className="ml-4 h-20 cursor-pointer drop-shadow-md"
+                        />
                     </Link>
                     <ul className="hidden lg:flex text-sm lg:mx-5">
                         {navLinks.map((page) => {
                             return (
-                                <li className="text-white ml-1" key={page.link}>
+                                <li
+                                    className="text-gray-500 ml-1"
+                                    key={page.link}
+                                >
                                     <Link
                                         to={page.link}
                                         smooth={true}
                                         duration={500}
-                                        className="cursor-pointer p-2 hover:text-[#BC96E6] hover:border-b-2 border-[#BC96E6] duration-150"
+                                        className="cursor-pointer p-2 hover:text-[#35A7FF] hover:border-t-2 border-[#35A7FF] duration-150"
                                     >
                                         {page.title}
                                     </Link>
@@ -57,7 +63,7 @@ const Navbar = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-5 w-5 mr-5"
                                 viewBox="0 0 20 20"
-                                fill="white"
+                                fill="black"
                             >
                                 <path
                                     fillRule="evenodd"
@@ -70,7 +76,7 @@ const Navbar = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-5 w-5 mr-5"
                                 viewBox="0 0 20 20"
-                                fill="white"
+                                fill="black"
                             >
                                 <path
                                     fillRule="evenodd"
@@ -81,6 +87,34 @@ const Navbar = () => {
                         )}
                     </div>
                 </div>
+
+                <ul
+                    className={
+                        !nav
+                            ? "hidden"
+                            : "absolute w-full px-8 bg-[#F3F3F4] lg:hidden drop-shadow-md"
+                    }
+                >
+                    {navLinks.map((page) => {
+                        return (
+                            <Link
+                                to={page.link}
+                                smooth={true}
+                                duration={500}
+                                className="cursor-pointer p-2 duration-150"
+                            >
+                                <div className="h-10 flex items-center hover:bg-[#c9e8ff] ">
+                                    <li
+                                        className="text-gray-500 mx-auto"
+                                        key={page.link}
+                                    >
+                                        {page.title}
+                                    </li>
+                                </div>
+                            </Link>
+                        );
+                    })}
+                </ul>
             </motion.div>
         </div>
     );
